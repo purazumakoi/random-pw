@@ -30,16 +30,21 @@
 function fEvent(num){
 
   var jsResult = document.getElementById('jsResult');
+  var jsUpper = document.getElementById('jsUpper');
   var str = "";
 
   for(var i=0; i<10; i++){
     var str1 = Math.random().toString(36).slice(-8);
     var str2 = Math.random().toString(36).slice(-8);
+	if(!jsUpper.checked){ str1 = str1.toUpperCase(); }
     str = str1 + str2;
     var slice = "-"+num;
     str = str.slice(slice);
   }
-
+  
+  // 
+  
+  
   jsResult.innerHTML=str;
 
 }
@@ -53,8 +58,11 @@ function fEvent(num){
   <a href="javascript:void(0);" onclick="fEvent(14)" >14桁</a>
   <a href="javascript:void(0);" onclick="fEvent(16)" >16桁</a>
 </p>
-<textarea id="jsResult" class="" style="width:350px;"></textarea>
 
+<form name="form1">
+<p class="link"><input type="checkbox" id="jsUpper" value="1"><label for="jsUpper">大文字を含めない</label></p>
+<textarea id="jsResult" class="" style="width:350px;"></textarea>
+</form>
 
 
 </body>
