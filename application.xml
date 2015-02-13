@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<application xmlns="http://ns.adobe.com/air/application/2.0">
+		<filename>random-pw</filename>
+		<copyright>kenzo</copyright>
+		<customUpdateUI>false</customUpdateUI>
+		<name>ランダムパスワード生成</name>
+		<id>random-pw</id>
+		<version>1</version>
+		<initialWindow>
+				<content>random_pw.html</content>
+				<height>200</height>
+				<width>400</width>
+				<systemChrome>standard</systemChrome>
+				<transparent>false</transparent>
+				<visible>true</visible>
+		</initialWindow>
+		<icon>
+				<image128x128>PW_icons/1_Desktop_Icons/icon_128.png</image128x128>
+				<image48x48>PW_icons/1_Desktop_Icons/icon_048.png</image48x48>
+				<image32x32>PW_icons/1_Desktop_Icons/icon_032.png</image32x32>
+				<image16x16>PW_icons/1_Desktop_Icons/icon_016.png</image16x16>
+		</icon>
+</application>

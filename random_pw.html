@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ランダムパスワード生成</title>
+
+<style type="text/css">
+	body {
+		padding: 0 10px;
+	}
+
+	.link a {
+		background: #0078A5;
+    color: #FFFFFF;
+    display: inline-block;
+		vertical-align: bottom;
+    font-size: 0.8em;
+    margin-left: 3px;
+    padding: 7px 10px;
+    text-decoration: none;
+	}
+  #jsResult {
+    border: 1px solid #ccc;
+  }
+</style>
+<script type="text/javascript">
+/*
+参考：http://www.softel.co.jp/blogs/tech/archives/3787
+*/
+function fEvent(num){
+
+  var jsResult = document.getElementById('jsResult');
+  var str = "";
+
+  for(var i=0; i<10; i++){
+    var str1 = Math.random().toString(36).slice(-8);
+    var str2 = Math.random().toString(36).slice(-8);
+    str = str1 + str2;
+    var slice = "-"+num;
+    str = str.slice(slice);
+  }
+
+  jsResult.innerHTML=str;
+
+}
+</script>
+</head>
+<body>
+<p class="link">
+  <a href="javascript:void(0);" onclick="fEvent(8)" >8桁</a>
+  <a href="javascript:void(0);" onclick="fEvent(10)" >10桁</a>
+  <a href="javascript:void(0);" onclick="fEvent(12)" >12桁</a>
+  <a href="javascript:void(0);" onclick="fEvent(14)" >14桁</a>
+  <a href="javascript:void(0);" onclick="fEvent(16)" >16桁</a>
+</p>
+<textarea id="jsResult" class="" style="width:350px;"></textarea>
+
+
+
+</body>
+</html>
